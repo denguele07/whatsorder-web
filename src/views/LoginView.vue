@@ -27,8 +27,8 @@ async function handleSubmit() {
 
     try {
         await authStore.login({
-            email:email.value,
-            password:password.value,
+            email: email.value,
+            password: password.value
         })
         router.push({ name: 'dashboard' })
         toastsStore.success(`Bienvenue ${authStore.user.name.split(' ')[0]} 👋`)
