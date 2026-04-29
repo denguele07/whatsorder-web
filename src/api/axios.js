@@ -1,7 +1,7 @@
 import axios from 'axios'// Importation de la bibliothèque axios pour les requêtes HTTP
 
 const api = axios.create({
-  baseURL: 'http://127.0.0.1:8000',// URL de base pour les requetes API
+  baseURL: import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000',// URL de base pour les requetes API
   withCredentials: true,// Permet d'envoyer les cookies avec les requetes pour l'autentification
   withXSRFToken: true,// Permet d'envoyer le token CSRF pour les requetes POST, PUT, DELETE
   xsrfCookieName: 'XSRF-TOKEN',// Nom du cookie qui contient le token CSRF
